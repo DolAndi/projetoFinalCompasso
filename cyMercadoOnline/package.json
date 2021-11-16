@@ -1,0 +1,22 @@
+{
+  "name": "cyMercadoOnline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ajv": "^8.8.0",
+    "chai": "^4.3.4",
+    "cypress": "^9.0.0",
+    "faker": "^5.5.3",
+    "merge": "^2.1.1",
+    "mochawesome": "^7.0.1"
+  }
+}
