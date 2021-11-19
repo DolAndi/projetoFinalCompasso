@@ -98,5 +98,13 @@ export default class Base {
     static validarUrl(url){
       cy.url().should('include', url)
     }
+
+    static validarElemento(elemento, index){
+      this.getElement(elemento, index).should('be.visible', { timeout: Cypress.env('global_timeout') });
+    }
+  
+    static verificarElementoContemAtr(element, atr) {
+      cy.get(element).should('not.have.attr', atr)
+    }
     
-  }
+}

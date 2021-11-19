@@ -1,6 +1,7 @@
 {
     "env": {
-        "base_url": "https://701523.commercesuite.com.br"
+        "base_url": "https://701523.commercesuite.com.br",
+        "loja_url" : "https://701523.commercesuite.com.br/loja"
     },
     "chromeWebSecurity": false,
     "video": false,

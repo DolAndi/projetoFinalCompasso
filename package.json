@@ -1,5 +1,5 @@
 {
-  "name": "cyMercadoOnline",
+  "name": "projetoFinalCompasso",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,7 +18,11 @@
     "chai": "^4.3.4",
     "cypress": "^9.0.0",
     "faker": "^5.5.3",
+    "faker-br": "^0.4.1",
     "merge": "^2.1.1",
     "mochawesome": "^7.0.1"
+  },
+  "dependencies": {
+    "js-brasil": "^2.5.1"
   }
 }
