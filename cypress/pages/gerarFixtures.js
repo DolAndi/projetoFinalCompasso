@@ -4,7 +4,7 @@ const { fakerBr } = require('js-brasil');
 import Base from './_base.page'
 
 export default class gerarFixtures extends Base {
-    static gerarUsuario() {
+    static gerarUsuario () {
         cy.writeFile('cypress/fixtures/usuarioValido.json', {
             'valido' :
                  {
@@ -17,8 +17,8 @@ export default class gerarFixtures extends Base {
                 "senha": `${faker.internet.password()}`
               }
           })
-    }
-    static gerarUsuarioInvalido() {
+    } 
+    static gerarUsuarioInvalido () {
       cy.writeFile('cypress/fixtures/usuarioInvalido.json',  {
           'invalido' :
                {
@@ -31,5 +31,14 @@ export default class gerarFixtures extends Base {
               "senha": `${faker.internet.password()}`
             }
         })
+      }
+    static gerarCep () {
+      cy.writeFile('cypress/fixtures/enderecoValido.json',  {
+        'valido' :
+              {
+            "cep": `${fakerBr.cep()}`,
+            "numero": `${faker.datatype.number()}`
+          }
+      })
+    }
   }
-}
