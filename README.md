@@ -8,6 +8,8 @@ Commerce Suite: https://701523.commercesuite.com.br/
 
 Instalação:
 
+Nodejs: npm init -y
+
 Cypress: npm i -D cypress 
 
 Faker: npm i -D faker
