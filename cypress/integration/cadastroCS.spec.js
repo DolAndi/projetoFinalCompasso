@@ -6,13 +6,10 @@ import loginCommerce from '../pages/login.page.js'
 
 describe('Deve realizar os testes da rota', () => {
     describe('Deve realizar os testes positivos', () => {
-        Cypress.on('uncaught:exception', (err, runnable) => {
-            return false;
-        });
         before(() => {
             cadastroCommerce.acessarCommerceSuite()
         })
-        it('Deve cadastrar uma pessoa física com sucesso', () => {
+        it('Deve cadastrar uma pessoa com sucesso', () => {
             cadastroCommerce.validarUrl(`${Cypress.env('base_url')}`)
             cadastroCommerce.entrarCadastro()
             cadastroCommerce.validarCamposCadastro()
@@ -22,10 +19,7 @@ describe('Deve realizar os testes da rota', () => {
         })
     }) 
     describe('Deve realizar os testes negativos', () => {
-        Cypress.on('uncaught:exception', (err, runnable) => {
-            return false;
-        });
-        it('Deve tentar cadastrar um usuário com CPF inválido', () => {
+        it('Deve falhar ao cadastrar um usuário com CPF invalidado', () => {
             gerarFixtures.gerarUsuarioInvalido()
             loginCommerce.logout()
             cadastroCommerce.entrarCadastro()

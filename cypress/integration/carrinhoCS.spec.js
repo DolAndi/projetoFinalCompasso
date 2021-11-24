@@ -1,17 +1,14 @@
 /// <reference types="cypress" />
 
-import CSCadastro from '../pages/cadastro.page.js'
+import cadastroCommerce from '../pages/cadastro.page.js'
 import carrinhoCommerce from '../pages/carrinho.page.js'
 
 describe('Deve realizar os testes da rota', () => {
     describe('Deve realizar os testes positivos', () => {
-        Cypress.on('uncaught:exception', (err, runnable) => {
-            return false;
-        });
         before(() => {
-            CSCadastro.acessarCommerceSuite()
+            cadastroCommerce.acessarCommerceSuite()
         })
-        it('Deve validar os elementos e adicionar um produto ao carrinho com sucesso', () => {
+        it('Deve efetuar validações e adição um produto ao carrinho com sucesso', () => {
             carrinhoCommerce.validarProdutos()
             carrinhoCommerce.validarModal()
             carrinhoCommerce.validarCarrinho()
@@ -22,12 +19,12 @@ describe('Deve realizar os testes da rota', () => {
     }) 
     describe('Deve realizar os testes negativos', () => {
         before(() => {
-            CSCadastro.acessarCommerceSuite()
+            cadastroCommerce.acessarCommerceSuite()
             carrinhoCommerce.validarProdutos()
             carrinhoCommerce.validarModal()
             carrinhoCommerce.validarCarrinho()
         })
-        it('Deve tentar usar um CEP inválido no frete', () => {
+        it('Deve tentar usar um CEP invalidado', () => {
             carrinhoCommerce.inserirFreteInvalido()
             carrinhoCommerce.validarCepInvalido()
         })
