@@ -23,7 +23,7 @@ export default class cadastroCommerce extends Base {
         super.validarElemento(C.TXT_SENHA2)
     } 
     static digitarCamposCadastro() {
-        gerarFixtures.gerarUsuario()
+        gerarFixtures.gerarUsuarioValido()
         cy.readFile(`cypress/fixtures/usuarioValido.json`).then((usuario) => {
             super.typeValue(C.TXT_NOME, usuario.valido.nome)
             super.typeValue(C.TXT_DATA, usuario.valido.data)

@@ -4,7 +4,7 @@ const { fakerBr } = require('js-brasil');
 import Base from './_base.page'
 
 export default class gerarFixtures extends Base {
-    static gerarUsuario () {
+    static gerarUsuarioValido () {
         cy.writeFile('cypress/fixtures/usuarioValido.json', {
             'valido' :
                  {

@@ -41,11 +41,11 @@ export default class enderecoCommerce extends Base {
     }  
     static cadastrarEnderecoInvalido() {
         cy.get(E.INPUT_CEP).clear()
-        super.typeValue(E.INPUT_CEP, "965163198")
+        super.typeValue(E.INPUT_CEP, "105163198")
         cy.get(E.INPUT_NOMEENDERECO).clear()
         super.typeValue(E.INPUT_NOMEENDERECO, "invalido")
         cy.get(E.INPUT_NUMERO).clear()
-        super.typeValue(E.INPUT_NUMERO, "777")
+        super.typeValue(E.INPUT_NUMERO, "875")
         cy.get(E.INPUT_RUA).clear()
         super.typeValue(E.INPUT_RUA, "invalido")
         cy.get(E.INPUT_BAIRRO).clear()

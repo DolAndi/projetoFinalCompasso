@@ -12,7 +12,7 @@ Cypress: npm i -D cypress
 
 Faker: npm i -D faker
 
-Faker BR: npm install -dev faker-br
+Faker BR: npm i -dev faker-br
 
 JSBrasil: npm i js-brasil
 
