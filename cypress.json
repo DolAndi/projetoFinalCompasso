@@ -5,7 +5,7 @@
     },
     "chromeWebSecurity": false,
     "video": false,
-    "screenshot": false,
+    "screenShot": false,
     "reporter": "mochawesome",
     "reporterOptions": {
         "reportDir": "cypress/report/mochawesome-report",
