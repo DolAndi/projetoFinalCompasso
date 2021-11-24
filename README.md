@@ -4,6 +4,7 @@ Automatização dos testes do site Commerce Suite através do Cypress.
 
 Commerce Suite: https://701523.commercesuite.com.br/
 
+--------------------------------------------------------------------------------------------------------------
 
 Instalação:
 
@@ -17,6 +18,7 @@ JSBrasil: npm i js-brasil
 
 Mochawesome: npm i -D mochawesome mochawesome merge
 
+--------------------------------------------------------------------------------------------------------------
 
 Execução:
 
@@ -28,6 +30,7 @@ Gerar um .json do report: npm run report:merge
 
 Muda o arquivo gerado do merge .json para .html: npm run report:generate
 
+--------------------------------------------------------------------------------------------------------------
 
 Nome: Andriano Toazza
 
