@@ -1,7 +1,7 @@
 {
   "name": "projetoFinalCompasso",
   "version": "1.0.0",
-  "description": "",
+  "description": "Automatização dos testes do site Commerce Suite através do Cypress.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,5 +26,13 @@
   },
   "dependencies": {
     "js-brasil": "^2.5.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DolAndi/projetoFinalCompasso.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DolAndi/projetoFinalCompasso/issues"
+  },
+  "homepage": "https://github.com/DolAndi/projetoFinalCompasso#readme"
 }
