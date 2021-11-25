@@ -17,24 +17,23 @@ export default class enderecoCommerce extends Base {
         super.validarElemento(E.INPUT_CEP)
     }
     static cadastrarEndereco() {
-        gerarFixtures.gerarCep()
-        cy.wait(5000)
+        cy.wait(2000)   
         cy.get(E.INPUT_NOMEENDERECO).clear()
         cy.get(E.INPUT_CEP).clear()
         cy.readFile(`cypress/fixtures/enderecoValido.json`).then((endereco) => {
             super.typeValue(E.INPUT_CEP, endereco.valido.cep)
         })
-        cy.wait(5000)
+        cy.wait(2000)
         super.typeValue(E.INPUT_NOMEENDERECO, "valido")
         cy.readFile(`cypress/fixtures/enderecoValido.json`).then((endereco) => {
             super.typeValue(E.INPUT_NUMERO, endereco.valido.numero)
         })
         super.clickOnElement(E.BTN_SALVAR)
-        cy.wait(5000)
+        cy.wait(2000)
         cy.url().then((url) => {
             if (url.includes('/addresses/edit')) {
                 cy.reload()
-                cy.wait(5000)
+                cy.wait(2000)
                 this.cadastrarEndereco()
             }
         })

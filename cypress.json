@@ -5,17 +5,18 @@
     },
     "chromeWebSecurity": false,
     "video": false,
-    "screenShot": false,
-    "reporter": "mochawesome",
+    "screenshot": true,
+    "screenshotFolder": "cypress/report/screenshots",
+    "reporter": "cypress-mochawesome-reporter",
     "reporterOptions": {
         "reportDir": "cypress/report/mochawesome-report",
-        "overwrite": false,
-        "html": false,
+        "overwrite": true,
+        "html": true,
         "json": true,
         "timestamp": "yyyymmdd_HHMMss",
         "reportTitles": "Relatorio",
-        "cdn": true,
-        "charts": true
+        "charts": true,
+        "embeddedScreenshots": true
     },    
     "defaultCommandTimeout": 10000
 }

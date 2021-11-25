@@ -1,5 +1,0 @@
-Problemas durante o desenvolvimento do projeto solo:
-
-Erro ao gerar reports;
-Falha ao instalar o cypress em um novo repositório (tentei como solução ao erro acima)
-
