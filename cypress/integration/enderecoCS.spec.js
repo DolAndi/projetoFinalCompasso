@@ -4,7 +4,7 @@ import cadastroCommerce from '../pages/cadastro.page.js'
 import loginCommerce from '../pages/login.page.js'
 import enderecoCommerce from '../pages/endereco.page.js'
 
-describe('Deve realizar os testes da rota', () => {
+describe('Deve realizar os testes da rota de endereço', () => {
     describe('Deve realizar os testes positivos', () => {
         before(() => {
             cadastroCommerce.acessarSite()

@@ -20,6 +20,7 @@ export default class carrinhoCommerce extends Base {
         super.clickOnElement(P.ADD_PRODUTO, randomNum)
     } 
     static validarModal(){
+        cy.wait(3000)
         super.clickOnElement(P.BTN_CARRINHO)
         super.validarElemento(M.DIV_PRODUTO)
         super.validarElemento(M.BTN_FECHAR)

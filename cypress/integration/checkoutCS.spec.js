@@ -5,8 +5,8 @@ import carrinhoCommerce from '../pages/carrinho.page.js'
 import checkoutCommerce from '../pages/checkout.page.js';
 import loginCommerce from '../pages/login.page.js'
 
-describe('Deve realizar os testes da rota', () => {
-    describe('Deve efetuar os testes positivos', () => {
+describe('Deve realizar os testes de checkout', () => {
+    describe('Deve efetuar o teste positivo', () => {
         before(() => {
             cadastroCommerce.acessarSite()
             carrinhoCommerce.validarProdutos()

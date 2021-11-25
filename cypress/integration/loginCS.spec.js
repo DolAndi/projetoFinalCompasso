@@ -4,7 +4,7 @@ import gerarFixtures from '../pages/gerarFixtures.js'
 import cadastroCommerce from '../pages/cadastro.page.js'
 import loginCommerce from '../pages/login.page.js'
 
-describe('Deve realizar os testes da rota /login',() => {
+describe('Deve realizar os testes da rota de login',() => {
     describe('Deve realizar os testes positivos',() => {
         before(() => {
             cadastroCommerce.acessarSite()
