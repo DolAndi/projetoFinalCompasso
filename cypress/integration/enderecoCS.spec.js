@@ -8,8 +8,8 @@ describe('Deve realizar os testes da rota', () => {
     describe('Deve realizar os testes positivos', () => {
         before(() => {
             cadastroCommerce.acessarCommerceSuite()
-            loginCommerce.validarEntrarLogin()  
-            loginCommerce.logar()
+            loginCommerce.validacaoLogin()  
+            loginCommerce.logarValido()
             cadastroCommerce.validarUrl('/my-account')
         })
         it('Deve efetuar um cadastro de um novo endereço', () => {
@@ -20,8 +20,8 @@ describe('Deve realizar os testes da rota', () => {
     describe('Deve realizar os testes negativos', () => {
         before(() => {
             cadastroCommerce.acessarCommerceSuite()
-            loginCommerce.validarEntrarLogin()  
-            loginCommerce.logar()
+            loginCommerce.validacaoLogin()  
+            loginCommerce.logarValido()
             cadastroCommerce.validarUrl('/my-account')
         })
         it('Deve falhar no cadastro de um endereço com dados invalidados', () => {

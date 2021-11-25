@@ -11,8 +11,8 @@ describe('Deve realizar os testes da rota /login',() => {
         })
         it('Deve efetuar o login de uma pessoa física com sucesso',() => {
             cadastroCommerce.validarUrl(`${Cypress.env('base_url')}`)
-            loginCommerce.validarEntrarLogin()  
-            loginCommerce.logar() 
+            loginCommerce.validacaoLogin()  
+            loginCommerce.logarValido() 
             cy.wait(5000)
             loginCommerce.validarLogin()  
         })

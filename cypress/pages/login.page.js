@@ -6,7 +6,7 @@ export default class loginCommerce extends Base {
     static logout() {
         cy.get(HP.BTN_LOGOUT).invoke('show').click({force: true})
     }
-    static validarEntrarLogin() {
+    static validacaoLogin() {
         super.validarElemento(HP.BTN_LOGIN)
         super.clickOnElement(HP.BTN_LOGIN)
         super.validarElemento(LP.BTN_LOGIN)
@@ -14,7 +14,7 @@ export default class loginCommerce extends Base {
         super.validarElemento(LP.TXT_USER)
         super.validarElemento(LP.BTN_CONTINUAR)
     } 
-    static logar() {
+    static logarValido() {
         cy.fixture(`../fixtures/usuarioValido.json`).then((usuario) => {
             super.typeValue(LP.TXT_USER, usuario.valido.email)
         })
@@ -36,7 +36,7 @@ export default class loginCommerce extends Base {
     }
     static logarInvalido() {
         super.clickOnElement(LP.BTN_SAIR, 8)
-        this.validarEntrarLogin()
+        this.validacaoLogin()
         cy.readFile(`cypress/fixtures/usuarioInvalido.json`).then((usuario) => {
             super.typeValue(LP.TXT_USER, usuario.invalido.email)
         })
