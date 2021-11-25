@@ -6,7 +6,7 @@ import {ENDERECO as E} from './components/endereco.elements.js'
 
 export default class enderecoCommerce extends Base {
     static validarEntrarEndereco() {
-        cy.wait(5000)
+        cy.wait(4000)
         super.validarElemento(LP.BTN_SAIR, 3)
         super.clickOnElement(LP.BTN_SAIR, 3)
         cy.readFile(`cypress/fixtures/usuarioValido.json`).then((usuario) => {
@@ -17,23 +17,23 @@ export default class enderecoCommerce extends Base {
         super.validarElemento(E.INPUT_CEP)
     }
     static cadastrarEndereco() {
-        cy.wait(2000)   
+        cy.wait(4000)   
         cy.get(E.INPUT_NOMEENDERECO).clear()
         cy.get(E.INPUT_CEP).clear()
         cy.readFile(`cypress/fixtures/enderecoValido.json`).then((endereco) => {
             super.typeValue(E.INPUT_CEP, endereco.valido.cep)
         })
-        cy.wait(2000)
+        cy.wait(4000)
         super.typeValue(E.INPUT_NOMEENDERECO, "valido")
         cy.readFile(`cypress/fixtures/enderecoValido.json`).then((endereco) => {
             super.typeValue(E.INPUT_NUMERO, endereco.valido.numero)
         })
         super.clickOnElement(E.BTN_SALVAR)
-        cy.wait(2000)
+        cy.wait(4000)
         cy.url().then((url) => {
             if (url.includes('/addresses/edit')) {
                 cy.reload()
-                cy.wait(2000)
+                cy.wait(4000)
                 this.cadastrarEndereco()
             }
         })

@@ -26,14 +26,6 @@ export default class loginCommerce extends Base {
         })
         super.clickOnElement(LP.BTN_CONTINUARSENHA)
     }
-    static validarLogin() {
-        super.validarUrl('/my-account')
-        cy.fixture('../fixtures/usuarioValido.json').then((usuario) => {
-            let stringsplit = usuario.valido.nome.split(" ")
-            let nome = stringsplit[0]
-            super.validateElementText(LP.TXT_LOGINWELCOME, `Olá, ${nome}`)
-        })
-    }
     static logarInvalido() {
         super.clickOnElement(LP.BTN_SAIR, 8)
         this.validacaoLogin()
@@ -47,7 +39,7 @@ export default class loginCommerce extends Base {
             super.typeValue(LP.TXT_SENHA, senha.invalido.senha)
         })
         super.clickOnElement(LP.BTN_CONTINUARSENHA)
-        cy.wait(2000)
+        cy.wait(4000)
         super.validateElementText(LP.TXT_LOGINERROR, 'Autenticação incorreta.')
     }
 }

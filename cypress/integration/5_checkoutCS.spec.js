@@ -18,4 +18,17 @@ describe('Deve realizar os testes de checkout', () => {
             checkoutCommerce.logarEmailCheckout()
         })
     })
+    describe('Deve efetuar o teste negativo', () => {
+        before(() => {
+            cadastroCommerce.acessarCommerceSuite()
+            carrinhoCommerce.validarProdutos()
+            carrinhoCommerce.validarModal()
+            carrinhoCommerce.validarCarrinho()
+        })
+        it('Deve tentar validar o login com um CPF inválido', () => {
+            checkoutCommerce.validarLoginCheckout()
+            checkoutCommerce.CPFcheckoutInv()
+            checkoutCommerce.checkoutInvalidado()
+        })
+    })
 })

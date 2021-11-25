@@ -20,6 +20,8 @@ JSBrasil: npm i js-brasil
 
 Mochawesome: npm i --save-dev mochawesome mochawesome-merge mochawesome-report-generator
 
+CypressMochawesomeReporter: npm i --save-dev cypress-mochawesome-reporter
+
 --------------------------------------------------------------------------------------------------------------
 
 Execução:

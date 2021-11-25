@@ -19,4 +19,19 @@ export default class checkoutCommerce extends Base {
         super.clickOnElement(CO.BTN_CONTINUAR)
         super.confirmarCpf()
     }
+    static CPFcheckoutInv(){
+        cy.fixture(`../fixtures/usuarioValido.json`).then((usuario) => {
+            super.typeValue(CO.INPUT_USER, usuario.valido.cpf)
+        })
+        super.clickOnElement(CO.BTN_CONTINUAR)
+        cy.wait(2000)
+        super.confirmarNomeInvalido()
+    }
+    static checkoutInvalidado() {
+        super.validarElemento(CI.DIV_INVALIDO)
+        super.validateElementText(CI.TXT_INVALIDO, 'Você errou as perguntas de segurança. Para continuar, efetue o login.')
+        super.validarElemento(CI.INPUT_SENHA)
+        super.verificarSeElementoContemAtrEValor(CI.INPUT_SENHA, 'placeholder', 'Digite sua senha')
+        super.validarElemento(CI.BTN_ESQUECEUSENHA)
+    }
 }

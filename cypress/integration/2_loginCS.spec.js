@@ -13,8 +13,6 @@ describe('Deve realizar os testes da rota de login',() => {
             cadastroCommerce.validarUrl(`${Cypress.env('base_url')}`)
             loginCommerce.validacaoLogin()  
             loginCommerce.logarValido() 
-            cy.wait(5000)
-            loginCommerce.validarLogin()  
         })
     }) 
     describe('Deve realizar os testes negativos',() => {
