@@ -7,7 +7,7 @@ import enderecoCommerce from '../pages/endereco.page.js'
 describe('Deve realizar os testes da rota', () => {
     describe('Deve realizar os testes positivos', () => {
         before(() => {
-            cadastroCommerce.acessarCommerceSuite()
+            cadastroCommerce.acessarSite()
             loginCommerce.validacaoLogin()  
             loginCommerce.logarValido()
             cadastroCommerce.validarUrl('/my-account')
@@ -19,7 +19,7 @@ describe('Deve realizar os testes da rota', () => {
     }) 
     describe('Deve realizar os testes negativos', () => {
         before(() => {
-            cadastroCommerce.acessarCommerceSuite()
+            cadastroCommerce.acessarSite()
             loginCommerce.validacaoLogin()  
             loginCommerce.logarValido()
             cadastroCommerce.validarUrl('/my-account')

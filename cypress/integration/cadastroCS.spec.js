@@ -7,7 +7,7 @@ import loginCommerce from '../pages/login.page.js'
 describe('Deve realizar os testes da rota', () => {
     describe('Deve realizar os testes positivos', () => {
         before(() => {
-            cadastroCommerce.acessarCommerceSuite()
+            cadastroCommerce.acessarSite()
         })
         it('Deve cadastrar uma pessoa com sucesso', () => {
             cadastroCommerce.validarUrl(`${Cypress.env('base_url')}`)

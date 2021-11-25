@@ -6,7 +6,7 @@ import carrinhoCommerce from '../pages/carrinho.page.js'
 describe('Deve realizar os testes da rota', () => {
     describe('Deve realizar os testes positivos', () => {
         before(() => {
-            cadastroCommerce.acessarCommerceSuite()
+            cadastroCommerce.acessarSite()
         })
         it('Deve efetuar validações e adição um produto ao carrinho com sucesso', () => {
             carrinhoCommerce.validarProdutos()
@@ -19,7 +19,7 @@ describe('Deve realizar os testes da rota', () => {
     }) 
     describe('Deve realizar os testes negativos', () => {
         before(() => {
-            cadastroCommerce.acessarCommerceSuite()
+            cadastroCommerce.acessarSite()
             carrinhoCommerce.validarProdutos()
             carrinhoCommerce.validarModal()
             carrinhoCommerce.validarCarrinho()

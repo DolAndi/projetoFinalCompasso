@@ -18,7 +18,7 @@ Faker BR: npm i -dev faker-br
 
 JSBrasil: npm i js-brasil
 
-Mochawesome: npm i -D mochawesome mochawesome merge
+Mochawesome: npm i --save-dev mochawesome mochawesome-merge mochawesome-report-generator
 
 --------------------------------------------------------------------------------------------------------------
 

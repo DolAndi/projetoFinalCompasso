@@ -4,7 +4,7 @@ import {HOMEPAGE as HP} from './components/cadastro.elements.js'
 import {CADASTRO as C} from './components/cadastro.elements.js'
 
 export default class cadastroCommerce extends Base {
-    static acessarCommerceSuite() {
+    static acessarSite() {
         cy.visit(`${Cypress.env('base_url')}`)
     }
     static entrarCadastro() {

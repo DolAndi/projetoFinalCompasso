@@ -8,7 +8,7 @@ import loginCommerce from '../pages/login.page.js'
 describe('Deve realizar os testes da rota', () => {
     describe('Deve efetuar os testes positivos', () => {
         before(() => {
-            cadastroCommerce.acessarCommerceSuite()
+            cadastroCommerce.acessarSite()
             carrinhoCommerce.validarProdutos()
             carrinhoCommerce.validarModal()
             carrinhoCommerce.validarCarrinho()
