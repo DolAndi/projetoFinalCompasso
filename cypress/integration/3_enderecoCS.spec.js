@@ -26,6 +26,7 @@ describe('Deve realizar os testes da rota de endereço', () => {
         })
         it('Deve falhar no cadastro de um endereço com dados invalidados', () => {
             enderecoCommerce.validarEntrarEndereco()
+            cy.wait(4000)
             enderecoCommerce.cadastrarEnderecoInvalido()
             enderecoCommerce.validarEnderecoInvalido()
         })

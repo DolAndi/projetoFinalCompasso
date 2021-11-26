@@ -88,7 +88,7 @@ export default class Base{
     expect(value).to.contain('teste');
     });
   }
-  static confirmarCpf(){
+  static CPF_confirmacao(){
     for(let i=0; i<3; i++){
       this.getElementText('.ch-well.secret-answer-option.ch-text-center', i).then((valor) => {
       var valorFormatado = valor.split('.').join("")

@@ -42,13 +42,13 @@ export default class enderecoCommerce extends Base {
         cy.get(E.INPUT_CEP).clear()
         super.typeValue(E.INPUT_CEP, "105163198")
         cy.get(E.INPUT_NOMEENDERECO).clear()
-        super.typeValue(E.INPUT_NOMEENDERECO, "invalido")
+        super.typeValue(E.INPUT_NOMEENDERECO, "Rua do sofrimento")
         cy.get(E.INPUT_NUMERO).clear()
-        super.typeValue(E.INPUT_NUMERO, "875")
+        super.typeValue(E.INPUT_NUMERO, "123132")
         cy.get(E.INPUT_RUA).clear()
-        super.typeValue(E.INPUT_RUA, "invalido")
+        super.typeValue(E.INPUT_RUA, "desespero")
         cy.get(E.INPUT_BAIRRO).clear()
-        super.typeValue(E.INPUT_BAIRRO, "invalido")
+        super.typeValue(E.INPUT_BAIRRO, "suprassumo")
         super.clickOnElement(E.BTN_SALVAR)
     }
     static validarEnderecoInvalido() {

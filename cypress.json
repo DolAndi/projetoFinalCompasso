@@ -17,5 +17,6 @@
         "reportTitles": "Relatorio",
         "charts": true,
         "embeddedScreenshots": true
-    }    
+    },
+    "defaultCommandTimeout": 10000    
 }

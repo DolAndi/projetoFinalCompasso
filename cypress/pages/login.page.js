@@ -1,6 +1,7 @@
 import Base from './_base.page';
 import {HOMEPAGE as HP} from './components/cadastro.elements.js'
 import {LOGINPAGE as LP} from './components/login.elements.js'
+import cadastroCommerce from '../pages/cadastro.page.js'
 
 export default class loginCommerce extends Base {
     static logout() {
@@ -27,7 +28,8 @@ export default class loginCommerce extends Base {
         super.clickOnElement(LP.BTN_CONTINUARSENHA)
     }
     static logarInvalido() {
-        super.clickOnElement(LP.BTN_SAIR, 8)
+        //super.clickOnElement(LP.BTN_SAIR, 8)
+        cadastroCommerce.acessarSite()
         this.validacaoLogin()
         cy.readFile(`cypress/fixtures/usuarioInvalido.json`).then((usuario) => {
             super.typeValue(LP.TXT_USER, usuario.invalido.email)
@@ -39,7 +41,7 @@ export default class loginCommerce extends Base {
             super.typeValue(LP.TXT_SENHA, senha.invalido.senha)
         })
         super.clickOnElement(LP.BTN_CONTINUARSENHA)
-        cy.wait(4000)
+        cy.wait(1000)
         super.validateElementText(LP.TXT_LOGINERROR, 'Autenticação incorreta.')
     }
 }
